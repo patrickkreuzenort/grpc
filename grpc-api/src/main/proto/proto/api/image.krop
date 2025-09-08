@@ -1,0 +1,16 @@
+{
+  "details": {
+    "endpoint": "http://localhost:8080",
+    "path": "/api/yolo/image/",
+    "method": "GET",
+    "disableServerCertificateValidation": true
+  },
+  "requests": [
+    {
+      "contentType": "none"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "rest",
+  "typeHint": "GET"
+}

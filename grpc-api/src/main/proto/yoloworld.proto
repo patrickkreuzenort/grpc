@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package com.x.programming.grpc.proto;
+
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "com.x.programming.grpc";
+option java_outer_classname = "YoloWorldProto";
+
+// Service definition.
+// ----------------------------------------------------------------
+// contains:
+// ----------------------------------------------------------------
+// a. abstract base class: GreeterGrpc.GreeterImplBase to extend when the server logic to implement
+// b. stub classes:
+// ----------------------------------------------------------------
+//  GreeterGrpc.GreeterStub, GreeterGrpc.GreeterBlockingStub, GreeterGrpc.GreeterFutureStub to use
+//
+// ----------------------------------------------------------------
+//
+// when calling the extern service
+service YoloGreeter {
+  rpc SayYolo (YoloRequest) returns (YoloReply) {}
+}
+
+service GetImage {
+  rpc GetImage (google.protobuf.Empty) returns (ImageResponse) {}
+}
+
+message ImageResponse {
+  bytes image_data = 1;
+}
+
+// POJO class with builders, that is used for request and response messages
+message YoloRequest {
+  string name = 1;
+}
+
+// POJO class with builders, that is used for request and response messages
+message YoloReply {
+  string message = 1;
+}
+
+
