@@ -1,0 +1,15 @@
+{
+  "details": {
+    "endpoint": "http://localhost:9090",
+    "methodFqn": "com.x.programming.grpc.proto.YoloGreeter.SayYolo",
+    "disableServerCertificateValidation": true
+  },
+  "requests": [
+    {
+      "location": "SayYolo-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc",
+  "importStreamId": "ad9a0b7b-69be-470d-afa6-47640c852823"
+}

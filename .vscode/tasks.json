@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (Maven)",
+      "type": "shell",
+      "command": "/opt/homebrew/bin/mvn -q -DskipTests clean package",
+      "group": "build"
+    },
+    {
+      "label": "mvn: clean package",
+      "type": "shell",
+      "command": "/opt/homebrew/bin/mvn -q -e -DskipTests clean package",
+      "group": "build"
+    },
+    {
+      "label": "run: Spring Boot",
+      "type": "shell",
+      "command": "/opt/homebrew/bin/mvn -q spring-boot:run",
+      "isBackground": true
+    },
+    {
+      "label": "run: GreeterClient (exec)",
+      "type": "shell",
+      "command": "/opt/homebrew/bin/mvn -q -Dexec.mainClass=com.example.grpc.client.GreeterClient -Dexec.args=Patryk exec:java",
+      "problemMatcher": []
+    }
+  ]
+}
